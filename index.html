@@ -5,63 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TertiaryHub</title>
     <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
 
-</head>
+
 <body>
-    <header class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="logo">TertiaryHub</a>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-            <nav class="nav-links" id="nav-links">
-              <a href="index.html" class="nav-item active">Home</a>
-              <a href="WASSCE Checker.html" class="nav-item">Wassce Checker</a>
-              <a href="UNIs.html" class="nav-item">Tertiaries</a>
-              <a href="about us.html" class="nav-item">About Us</a>
-              <a href="contact us.html" class="nav-item">Contact Us</a>
-              <a href="login-signup.html" class="nav-item">Login/Signup</a>
-            </nav>
+    <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="index.html">Tertiary Hub</a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">Tertiary Hub</span>
+              <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+              <li><a href="index.html">HOME</a></li>
+              <li>
+                <a href="#">SERVICES</a>
+                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li><a href="Results Checker.html">RESULTS CHECKER</a></li>
+                  <li><a href="tertiaries\tertiaries.html">TERTIARIES</a></li>
+                  <li><a href="course finder.html">COURSE FINDER</a></li>
+                </ul>
+              </li>
+              <li><a href="notice\index.html">NOTICE BOARD</a></li>
+              <li><a href="about us.html">ABOUT US</a></li>
+              <li><a href="contact us.html">CONTACT US</a></li>
+              <li><a href="login-signup.html">LOGIN/SIGNUP</a></li>
+            </ul>
+          </div>
+          <div class="search-box">
+            <i class='bx bx-search'></i>
+            <div class="input-box">
+              <input type="text" placeholder="Search...">
+            </div>
+          </div>
         </div>
-    </header>
+      </nav>
 
-    <div class="hero-banner">
-      <div class="hero-content">
-          <h1>Welcome to TertiaryHub</h1>
-          <p>Dream Big, Apply Smart: Your Guide to Tertiary Admissions</p>
-          <a href="#" class="cta-button">Get Started</a>
-      </div>
-  </div>
+      <div class="home-hero-banner">
+        <div class="home-hero-content">
+            <h1>Welcome to TertiaryHub</h1>
+            <p>Dream Big, Apply Smart: Your Guide to Tertiary Admissions</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </div>
 
   <div class="CARcontainer">
     <div class="carousel">
         <div class="slides">
             <div class="slide active">
                 <div class="slide-content">
-                    <img src="https://via.placeholder.com/800x400" alt="Service 1">
+                    <img src="images\wassce checker.jpg" alt="WASSCE CHECKER">
                     <div class="text">
-                        <h2>Service 1</h2>
-                        <p>Description of Service 1</p>
+                        <h2>RESULTS CHECKER</h2>
+                        <p>Buy a voucher and check your WASSCE results from us.</p>
                     </div>
                 </div>
             </div>
             <div class="slide">
                 <div class="slide-content">
-                    <img src="https://via.placeholder.com/800x400/ff6600" alt="Service 2">
+                    <img src="images\tertiary form.jpg" alt="TERTIARY FORM VOUCHER">
                     <div class="text">
-                        <h2>Service 2</h2>
-                        <p>Description of Service 2</p>
+                        <h2>TERTIARY FORM VOUCHER</h2>
+                        <p>Buy a voucher for any tertiary of your preference.</p>
                     </div>
                 </div>
-            </div>
-            <div class="slide">
-                <div class="slide-content">
-                    <img src="https://via.placeholder.com/800x400/048400" alt="Service 3">
-                    <div class="text">
-                        <h2>Service 3</h2>
-                        <p>Description of Service 3</p>
-                    </div>
-                </div>
-            </div>
+            </div> 
         </div>
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -74,6 +87,7 @@
             <li><a href="#">Article 3</a></li>
             <li><a href="#">Article 4</a></li>
         </ul>
+        <button class="blog" >BLOG</button>
     </aside>
   </div>
 
@@ -130,6 +144,6 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <div class="credit">By <strong>The Codecleavers</strong></div>
 
-    <script src="js\script.js"></script>
+<script src="js\script.js"></script>
 </body>
 </html>
