@@ -1,0 +1,144 @@
+Step 2: Set Up Your Git Flow Branches
+1. Feature Branches
+Features to Develop:
+
+User Signup & Login with Account Verification
+Password Reset Feature
+Feed Page with Downloadable Files
+Search File Server
+Send File to an Email
+Admin Upload Files
+Admin View Download and Email Stats
+Create and work on feature branches:
+
+User Signup & Login with Account Verification:
+
+git flow feature start user-authentication
+Develop the feature and commit your changes.
+
+git add .
+git commit -m "Implement user signup, login, and account verification"
+Finish the feature.
+
+git flow feature finish user-authentication
+Password Reset Feature:
+
+git flow feature start password-reset
+Develop the feature and commit your changes.
+
+git add .
+git commit -m "Implement password reset functionality"
+Finish the feature.
+
+git flow feature finish password-reset
+Feed Page with Downloadable Files:
+
+
+git flow feature start feed-page
+Develop the feature and commit your changes.
+
+
+git add .
+git commit -m "Implement feed page with downloadable files"
+Finish the feature.
+
+
+git flow feature finish feed-page
+Search File Server:
+
+
+git flow feature start search-file-server
+Develop the feature and commit your changes.
+
+
+git add .
+git commit -m "Implement file search functionality"
+Finish the feature.
+
+
+git flow feature finish search-file-server
+Send File to an Email:
+
+
+git flow feature start send-file-email
+Develop the feature and commit your changes.
+
+
+git add .
+git commit -m "Implement send file to email functionality"
+Finish the feature.
+
+
+git flow feature finish send-file-email
+Admin Upload Files:
+
+
+git flow feature start admin-upload-files
+Develop the feature and commit your changes.
+
+
+git add .
+git commit -m "Implement admin file upload with title and description"
+Finish the feature.
+
+
+git flow feature finish admin-upload-files
+Admin View Download and Email Stats:
+
+
+git flow feature start admin-stats
+Develop the feature and commit your changes.
+
+
+git add .
+git commit -m "Implement admin view for download and email stats"
+Finish the feature.
+
+
+git flow feature finish admin-stats
+2. Release Branches
+Once you have completed the features for the next release, prepare for the release:
+
+Start a Release Branch:
+
+
+git flow release start v1.0.0
+Prepare the Release:
+
+Perform final testing, make any necessary bug fixes, update documentation, and commit your changes.
+
+
+git add .
+git commit -m "Prepare release v1.0.0"
+Finish the Release:
+
+Finish the release branch. This merges it into both the main and develop branches, and tags the release in the main branch.
+
+
+git flow release finish v1.0.0
+3. Hotfix Branches
+If a critical issue is found in production, handle it with a hotfix branch:
+
+Create a Hotfix Branch:
+
+
+git flow hotfix start critical-bug-fix
+Fix the Issue:
+
+Implement the fix and commit your changes.
+
+
+git add .
+git commit -m "Fix critical bug"
+Finish the Hotfix:
+
+Finish the hotfix branch. This merges it into both the main and develop branches.
+
+
+git flow hotfix finish critical-bug-fix
+Summary
+Initialize Git and Git Flow: Set up your project with Git and Git Flow.
+Develop Features: Use feature branches to develop new functionality.
+Prepare Releases: Use release branches to prepare and finalize releases.
+Handle Hotfixes: Use hotfix branches to address critical issues in production.
+Deploy: Deploy your project from the main branch after completing a release.

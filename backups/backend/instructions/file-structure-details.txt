@@ -1,0 +1,35 @@
+Detailed Breakdown
+config/: Configuration files, such as the database connection.
+
+db.js: Database connection configuration.
+controllers/: Handles the business logic for different routes.
+
+authController.js: Handles user authentication (signup, login, reset password).
+adminController.js: Handles admin-specific actions.
+middleware/: Middleware functions for various purposes.
+
+authMiddleware.js: Middleware for protecting routes and checking admin privileges.
+errorMiddleware.js: Middleware for handling errors globally.
+models/: Defines the data models/schema.
+
+userModel.js: User schema and methods.
+routes/: Defines the application routes.
+
+authRoutes.js: Routes related to user authentication.
+fileRoutes.js: Routes related to file operations.
+adminRoutes.js: Routes related to admin operations (or integrated within authRoutes.js as per our middleware approach).
+views/: EJS template files for rendering the client-side views.
+
+login.ejs: Login page.
+signup.ejs: Signup page.
+resetPassword.ejs: Reset password page.
+public/: Static assets like CSS, JavaScript, and images.
+
+style.css: Stylesheet for the application.
+scripts.js: Any client-side JavaScript files.
+Root Files:
+
+.env: Environment variables.
+server.js: Entry point of the application, setting up the server and applying middleware.
+package.json: Node.js project metadata and dependencies.
+README.md: Project documentation.

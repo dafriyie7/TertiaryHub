@@ -1,0 +1,37 @@
+userRoutes 
+................................................
+Purpose: Handles user authentication and management.
+
+Routes:
+
+POST /user/signup: For user signup.
+POST /user/login: For user login.
+PUT /user/resetPassword: For password reset.
+GET /user/login: Render login page.
+GET /user/signup: Render signup page.
+Controller Methods: Functions to handle signup, login, and password reset logic.
+
+Middleware: May include middleware for input validation, authentication, etc.
+
+fileRoutes  FILE ROUTES
+.................................................
+Purpose: Handles file operations such as uploading, retrieving, updating, and deleting files.
+
+Routes:
+
+GET /files: Get all files.
+POST /files: Upload a new file.
+GET /files/:id: Get a specific file by ID.
+PUT /files/:id: Update a file by ID.
+DELETE /api/files/:id: Delete a file by ID.
+Middleware: Uses multer for handling file uploads, can also include middleware for authentication, input validation, etc.
+
+ADMIN IMPLEMENTATION
+..................................................
+
+Implementation Steps
+Add a Role to the User Model: Add an isAdmin field to the user model to differentiate between admin and regular users.
+
+Create Middleware for Role-Based Access Control: Create middleware to check if the user has admin privileges.
+
+Use the Middleware in Routes: Apply the middleware to routes that require admin access.
