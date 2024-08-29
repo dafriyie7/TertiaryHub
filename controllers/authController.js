@@ -11,7 +11,7 @@ const { isAuthenticated, isAdmin } = require('../middleware/authMiddleware');
 // @access Public
 const renderLoginSignup = (req, res) => {
     if (req.isAuthenticated()) {
-        return res.redirect('/auth/index'); // Redirect if already logged in
+        return res.redirect('/auth/home'); // Redirect if already logged in
     }
     res.render('login-signup'); // Render login page
 };
@@ -20,7 +20,7 @@ const renderLoginSignup = (req, res) => {
 // @route GET /auth/home
 // @access Public
 const renderHome = (req, res) => {
-    res.render('index');
+    res.render('index', { isAuthenticated: req.isAuthenticated() });
 };
 
 // @desc Render About-Us Page
@@ -69,7 +69,7 @@ const renderForgotPassword = (req, res) => {
 // @route GET /auth/notice-board
 // @access Public
 const renderNoticeBoard = (req, res) => {
-    res.json({ msg: "notice board" });
+    res.render('notice/index');
 };
 
 // @desc Register user
@@ -137,7 +137,7 @@ const signup = asyncHandler(async (req, res) => {
 // @route POST /auth/login
 // @access Public
 const login = passport.authenticate('local', {
-    successRedirect: '/home',
+    successRedirect: '/auth/home',
     failureRedirect: '/auth/login',
     failureFlash: true
 });

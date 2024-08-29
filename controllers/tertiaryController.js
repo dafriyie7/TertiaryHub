@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const File = require('../models/fileModel');
+const Tertiary = require('../models/tertiaryModel');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const dbx = require('../config/dropbox');

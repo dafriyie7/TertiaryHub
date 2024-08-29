@@ -1,24 +1,20 @@
 const mongoose = require('mongoose');
 
-const fileSchema = new mongoose.Schema({
-    title: {
+const tertiarySchema = new mongoose.Schema({
+    image: {
+        type: String,
+        required: true
+    },
+    name: {
         type: String,
         required: true,
         unique: true
     },
-    description: {
+    price: {
         type: String,
         required: true
     },
-    path: {
-        type: String,
-        required: true
-    },
-    downloadCount: {
-        type: Number,
-        default: 0
-    },
-    shareCount: {
+    clickCount: {
         type: Number,
         default: 0
     },
@@ -30,4 +26,4 @@ const fileSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('File', fileSchema);
+module.exports = mongoose.model('File', tertiarySchema);

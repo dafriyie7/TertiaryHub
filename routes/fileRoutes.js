@@ -8,7 +8,7 @@ const {
     deleteFile,
     shareFile,
     renderDashboard
-} = require('../controllers/fileController');
+} = require('../controllers/tertiaryController');
 
 router.get('/dashboard', Authenticated, renderDashboard);
 router.post('/upload', Authenticated, isAdmin, uploadFile);

@@ -34,7 +34,12 @@
                     <li><a href="notice-board">NOTICE BOARD</a></li>
                     <li><a href="about">ABOUT US</a></li>
                     <li><a href="contact-us">CONTACT US</a></li>
-                    <li><a href="login">LOGIN/SIGNUP</a></li>
+                    
+                    <li><% if (isAuthenticated) { %>
+                        <li><a href="logout">LOGOUT</a></li>
+                        <% } else { %>
+                            <li><a href="login">LOGIN/SIGNUP</a></li>
+                            <% } %></li>
                 </ul>
             </div>
             <div class="search-box">
@@ -44,13 +49,14 @@
                 </div>
             </div>
         </div>
+        
     </nav>
 
       <div class="home-hero-banner">
         <div class="home-hero-content">
             <h1>Welcome to TertiaryHub</h1>
             <p>Dream Big, Apply Smart: Your Guide to Tertiary Admissions</p>
-            <a href="#" class="cta-button">Get Started</a>
+            <a href="tertiaries" class="cta-button">Get Started</a>
         </div>
     </div>
 
@@ -59,7 +65,7 @@
         <div class="slides">
             <div class="slide active">
                 <div class="slide-content">
-                    <img src="images\wassce checker.jpg" alt="WASSCE CHECKER">
+                    <img src="/images/wassce checker.jpg" alt="WASSCE CHECKER">
                     <div class="text">
                         <h2>RESULTS CHECKER</h2>
                         <p>Buy a voucher and check your WASSCE results from us.</p>
@@ -68,7 +74,7 @@
             </div>
             <div class="slide">
                 <div class="slide-content">
-                    <img src="images\tertiary form.jpg" alt="TERTIARY FORM VOUCHER">
+                    <img src="/images/tertiary form.jpg" alt="TERTIARY FORM VOUCHER">
                     <div class="text">
                         <h2>TERTIARY FORM VOUCHER</h2>
                         <p>Buy a voucher for any tertiary of your preference.</p>
